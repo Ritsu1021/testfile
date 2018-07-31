@@ -1,4 +1,5 @@
 <!doctype html>
+{{ dd($questions) }}
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -16,16 +17,15 @@
 
     <body>
       <!-- <div class=“wrapper”> -->
-           @include('header')
+           @include('layouts.header')
         <div class="row">
            @include('sidebar')
             <div class="main col-xs-9">
               メイン
-              @include('feed')
+              @include('partial.feed')
             </div>
         </div>
       <!-- </div> -->
-
 
     </body>
 </html>
