@@ -12,4 +12,10 @@ class Question extends Model
         $questions = DB::table('questions')->select('body')->get();
         return $questions;
     }
+    public function insert($data,$user_id)
+    {
+        DB::table('questions')
+        ->insert(['body' => $data['coment'],'user_id' => $user_id]);
+
+    }
 }

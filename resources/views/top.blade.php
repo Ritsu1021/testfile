@@ -1,5 +1,5 @@
 <!doctype html>
-{{ dd($questions) }}
+
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -21,8 +21,11 @@
         <div class="row">
            @include('sidebar')
             <div class="main col-xs-9">
-              メイン
+              <h1>質問箱</h1>
+              <h2>投稿一覧</h2>
+              @foreach($questions as $question)
               @include('partial.feed')
+              @endforeach
             </div>
         </div>
       <!-- </div> -->

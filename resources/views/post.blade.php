@@ -16,17 +16,27 @@
 
     <body>
       <!-- <div class=“wrapper”> -->
-           @include('header')
+           @include('layouts.header')
         <div class="row">
            @include('sidebar')
             <div class="main col-xs-9">
               <h2>新規投稿</h2>
-              <form action="" method="post">
+              <form action="/post" method="post">
+                {{ csrf_field() }}
                     <div class="name"><sapn class="label">お名前:</sapn><input type="text" name="name" value="" placeholder="介護 太郎"></div>
 
                     <div class="honbun"><sapn class="label">本文:</sapn><textarea name="coment" cols="30" rows="3"placeholder="質問はこちらへどうぞ"></textarea></div>
                     <p><input type="submit" value="投稿"><br>
               </form>
+              @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             </div>
         </div>

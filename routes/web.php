@@ -18,10 +18,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/newpost', function () {
-    return view('post');
+Route::group(['middleware' => ['auth']],function(){
+    Route::get('/newpost', function () {
+        return view('post');
+    });
+Route::post('/post', 'IndexController@postQuestion');
+
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

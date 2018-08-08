@@ -3,6 +3,15 @@ header{
   background-color: #f5f8fa;
 }
 
+.maintitle{
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.login{
+   margin: 25px 40px;
+}
+
 body {
   background-color: #E9EBEE;
 }
