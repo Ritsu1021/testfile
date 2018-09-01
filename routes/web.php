@@ -18,10 +18,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => ['auth']],function(){
-    Route::get('/newpost', function () {
-        return view('post');
-    });
-Route::post('/post', 'IndexController@postQuestion');
+Route::get('/question/{id}/detail', 'QuestionController@index');
 
+
+Route::group(['middleware' => ['auth']],function(){
+  Route::get('/newpost', 'QuestionController@postView');
+  Route::post('/question/{id}/post', 'QuestionController@answer');
+  Route::post('/post', 'IndexController@postQuestion');
 });
+
+/*
+   Route::get('/newpost', function () {
+       return view('post');
+   });
+ */

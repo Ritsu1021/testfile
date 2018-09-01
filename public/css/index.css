@@ -25,7 +25,7 @@ body {
 
 .main {
   display: inline-block;
-  text-align: center;
+  text-align: left;
   font-family: 'San Francisco', 游ゴシック体, YuGothic, メイリオ, Meiryo;
 }
 
@@ -40,8 +40,61 @@ body {
   color: inherit;
 }
 
+/* partial.feed topのところに反映される */
 .toukou{
-    border-top: 1px solid;
-    margin: 40px auto;
+    /* border-top: 1px solid;
+    margin: 40px auto; */
     /* max-width: 975px; */
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #5d627b;
+      background: white;
+      border-top: solid 5px #5d627b;
+      box-shadow: 0 3px 5
+}
+
+/* post_answer 投稿内容 */
+.question-content{
+    position: relative;
+    margin: 2em 0;
+    margin-right: 20px;
+    padding: 0.5em 1em;
+    border: solid 3px #5d627b;
+
+
+}
+.question-content .box-title{
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #5d627b;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+
+}
+
+
+/* post_answer 投稿の回答 */
+.box1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5
+}
+.box1 p {
+    margin: 0;
+    padding: 0;
+}
+
+.answer-content{
+    margin-right: 20px;
 }

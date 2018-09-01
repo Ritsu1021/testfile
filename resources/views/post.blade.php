@@ -23,20 +23,20 @@
               <h2>新規投稿</h2>
               <form action="/post" method="post">
                 {{ csrf_field() }}
-                    <div class="name"><sapn class="label">お名前:</sapn><input type="text" name="name" value="" placeholder="介護 太郎"></div>
-
-                    <div class="honbun"><sapn class="label">本文:</sapn><textarea name="coment" cols="30" rows="3"placeholder="質問はこちらへどうぞ"></textarea></div>
-                    <p><input type="submit" value="投稿"><br>
+                    <div class="name"><sapn class="label">お名前:</sapn><input type="text" name="name" value="{{$user->name}}" placeholder="介護 太郎"></div>
+                    <div class="honbun"><sapn class="label">タイトル:</sapn><textarea name="title" cols="30" rows="1"placeholder="タイトルはこちらへ"></textarea></div>
+                    <div class="honbun"><sapn class="label">本文:</sapn><textarea name="coment" cols="60" rows="6"placeholder="質問はこちらへ"></textarea></div>
+                    <input type="submit" value="投稿"><br>
               </form>
               @if (count($errors) > 0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+              @endif
 
             </div>
         </div>
