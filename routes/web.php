@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/question/{id}/detail', 'QuestionController@index');
+// Route::get('/', 'QuestionController@headerView');
 
 
 Route::group(['middleware' => ['auth']],function(){

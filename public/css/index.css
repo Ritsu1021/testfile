@@ -3,13 +3,25 @@ header{
   background-color: #f5f8fa;
 }
 
+
 .maintitle{
   margin-top: 25px;
   margin-left: 10px;
+  width: 40%;
 }
 
 .login{
    margin: 25px 40px;
+   display: flex;
+   justify-content: flex-end;
+   width: 60%;
+}
+.loginbutton{
+
+}
+
+.loginname{
+
 }
 
 body {
@@ -47,10 +59,12 @@ body {
     /* max-width: 975px; */
       padding: 0.5em 1em;
       margin: 2em 0;
+      margin-right: 20px;
       color: #5d627b;
       background: white;
       border-top: solid 5px #5d627b;
       box-shadow: 0 3px 5
+
 }
 
 /* post_answer 投稿内容 */

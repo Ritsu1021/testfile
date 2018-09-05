@@ -14,6 +14,11 @@ class QuestionController extends Controller
         return view('post',compact('user'));
   }
 
+  // public function headerView(){
+  //     $user = \Auth::user();
+  //     return view('header',compact('user'));
+  // }
+
   public function index($id){
       // return $id;
       //回答するユーザー情報、質問本文、質問タイトル
@@ -28,7 +33,7 @@ class QuestionController extends Controller
       // dd($answers);
       return view('post_answer',compact('user', 'questions', 'answers'));
   }
-//
+
   public function answer(Request $request, $id){
         $data = $request->all();
         $question_id = $id;
