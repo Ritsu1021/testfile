@@ -15,14 +15,21 @@
     </head>
 
     <body>
+
       <!-- <div class=“wrapper”> -->
            @include('layouts.header')
         <div class="row">
            @include('sidebar')
             <div class="main col-xs-9">
-            
-              <h1>質問箱</h1>
-              <h2>投稿一覧</h2>
+                  @if($_GET)
+                  <div class="alert alert-success" role="alert">投稿ありがとうございます！！</div>
+                  @endif
+              <h1 class="topname">
+                質問箱
+              </h1>
+              <h2 class="toukouichiran">
+                質問投稿一覧
+              </h2>
               @foreach($questions as $question)
               @include('partial.feed')
               @endforeach

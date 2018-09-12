@@ -3,11 +3,28 @@ header{
   background-color: #f5f8fa;
 }
 
+/* header こんにちは〇〇さん */
+.loginname{
+  margin-top: 5px;
+  margin-left: 3px;
+}
 
+/* 介護助け合い質問箱 */
+.mainbox{
+    margin: 10px 0px 10px 30px;
+    /* margin-left: 30px; */
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #a6d3c8;/*左線*/
+    border-right: double 7px #a6d3c8;/*右線*/
+    /* white-space: nowrap */
+}
 .maintitle{
-  margin-top: 25px;
-  margin-left: 10px;
-  width: 40%;
+  margin-top: 13px;
+  margin-right: 15px;
+  margin-left: 15px;
+  white-space: nowrap;
+  /* width: 40%; */
 }
 
 .login{
@@ -21,6 +38,7 @@ header{
 }
 
 .loginname{
+  margin-top: 3px;
 
 }
 
@@ -30,6 +48,8 @@ body {
 /* .wrapper {
   background-color: #E9EBEE;
 } */
+
+
 
 .row{
   display:  inline-block;
@@ -51,6 +71,55 @@ body {
   margin-right: 5px;
   color: inherit;
 }
+/* サイドバー 全体*/
+.sidebox {
+  margin-top: 30px;
+}
+
+/* topの質問箱 */
+.topname{
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 35px;/*フォントサイズ*/
+  color: inherit;/*フォントカラー*/
+  background: #a6d3c8;/*リボンの色*/
+  margin-top: 20px;
+}
+.topname:before {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 0;
+      border: none;
+      border-bottom: solid 15px transparent;
+      border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+
+/* top投稿一覧 */
+.toukouichiran{
+background: linear-gradient(transparent 70%, #a6d3c8 70%);
+margin-right: 500px;
+}
+
+/* top詳細はこちら */
+.square_btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #a6d3c8;/*背景色*/
+    border-bottom: solid 2px #6DA89A;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+}
+
+.square_btn:active {
+    border-bottom: solid 2px #a6d3c8;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
 
 /* partial.feed topのところに反映される */
 .toukou{
@@ -64,13 +133,14 @@ body {
       background: white;
       border-top: solid 5px #5d627b;
       box-shadow: 0 3px 5
-
 }
+
+
 
 /* post_answer 投稿内容 */
 .question-content{
     position: relative;
-    margin: 2em 0;
+    margin-top: 60px;
     margin-right: 20px;
     padding: 0.5em 1em;
     border: solid 3px #5d627b;
@@ -94,8 +164,50 @@ body {
 
 }
 
+/* post_answer 「みんなの回答」 */
+.minna{
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #E9EBEE;
+  border: solid 3px #555;
+  box-sizing: border-box;
+}
 
-/* post_answer 投稿の回答 */
+.minna:before{
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #E9EBEE;
+  z-index: 2;
+}
+
+.minna:after{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-top: 14px solid #555;
+  z-index: 1;
+}
+
+.minna h2 {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* post_answer 回答内容 */
 .box1 {
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -104,6 +216,7 @@ body {
     border-top: solid 5px #5d627b;
     box-shadow: 0 3px 5
 }
+
 .box1 p {
     margin: 0;
     padding: 0;
@@ -111,4 +224,51 @@ body {
 
 .answer-content{
     margin-right: 20px;
+}
+/* 回答するにはログインしてください */
+.point1{
+  margin_top: 15px;
+}
+
+
+/* post_answerの新規回答 */
+.post-answer2{
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 35px;/*フォントサイズ*/
+  color: inherit;/*フォントカラー*/
+  background: #a6d3c8;/*リボンの色*/
+  margin: 15px 0;
+}
+
+.post-answer2:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+
+
+/* newpost 新規投稿 */
+.newpost{
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 35px;/*フォントサイズ*/
+  color: inherit;/*フォントカラー*/
+  background: #a6d3c8;/*リボンの色*/
+  margin-top: 20px;
+}
+.newpost:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
 }

@@ -9,13 +9,17 @@ class Question extends Model
 {
     public function get()
     {
-        $questions = DB::table('questions')->select('id', 'body', 'title')->get();
+        $questions = DB::table('questions')->select('questions.id', 'body', 'title', 'questions.created_at', 'users.name')
+        ->join('users', 'users.id', '=', 'questions.user_id')
+        ->get();
         return $questions;
     }
-    
+
     public function find($id)
     {
-        $questions = DB::table('questions')->select('id', 'body', 'title')->where('id', $id)->get();
+        $questions = DB::table('questions')->select('questions.id', 'body', 'title', 'questions.created_at', 'users.name')
+        ->join('users', 'users.id', '=', 'questions.user_id')
+        ->where('questions.id', $id)->get();
         return $questions['0'];
     }
 

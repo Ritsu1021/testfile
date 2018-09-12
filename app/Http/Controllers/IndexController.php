@@ -12,6 +12,7 @@ class IndexController extends Controller
         $user = \Auth::user();
         $question = new Question();
         $questions = $question->get();
+        // dd($questions);
         //質問内容を格納した配列をViewに渡す
         // return view('top')->with('questions', $questions);
         return view('top',compact('questions', 'user'));
@@ -32,7 +33,8 @@ class IndexController extends Controller
         //モデルに命令を出す（データも同時に渡す）
         $questions = $question->insert($data, $user_id );
         // dd($user_id);
+        return redirect('/?referer=post_question');
         //投稿完了ページに遷移
-    }
+  }
 
 }

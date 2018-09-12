@@ -20,13 +20,16 @@
         <div class="row">
            @include('sidebar')
             <div class="main col-xs-9">
-              <h2>新規投稿</h2>
+              <h2 class="newpost">質問投稿</h2>
+              <h4>〜質問 疑問 お悩み なんでもお気軽に〜</h4>
+
               <form action="/post" method="post">
                 {{ csrf_field() }}
                     <div class="name"><sapn class="label">お名前:</sapn><input type="text" name="name" value="{{$user->name}}" placeholder="介護 太郎"></div>
                     <div class="honbun"><sapn class="label">タイトル:</sapn><textarea name="title" cols="30" rows="1"placeholder="タイトルはこちらへ"></textarea></div>
                     <div class="honbun"><sapn class="label">本文:</sapn><textarea name="coment" cols="60" rows="6"placeholder="質問はこちらへ"></textarea></div>
                     <input type="submit" value="投稿"><br>
+
               </form>
               @if (count($errors) > 0)
               <div class="alert alert-danger">

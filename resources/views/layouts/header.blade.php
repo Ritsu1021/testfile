@@ -1,6 +1,9 @@
 <header>
-
-  <h1 class="maintitle">介護職 助け合い質問箱</h1>
+  <div class="mainbox">
+    <a href="/">
+     <h1 class="maintitle">介護職 助け合い質問箱</h1>
+    </a>
+  </div>
 
   <div class="login">
     <form class="loginbutton"action="{{ route('login') }}" method="post">
@@ -13,10 +16,7 @@
 
        <a href="{{ route('logout') }}"
            onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-      ログアウト
-       </a>
-
+                    document.getElementById('logout-form').submit();">ログアウト</a>
        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
            {{ csrf_field() }}
        </form>

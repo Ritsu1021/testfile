@@ -44,8 +44,14 @@ class QuestionController extends Controller
       ]);
         $user = \Auth::user();
         $user_id = $user->id;
+        // $questionsの変数を記入するために追加した
+        $question = new Question();
+        $questions = $question->find($id);
+        // ここまで
         $answer = new Answer();
         $answers = $answer->answerInsert($data, $user_id, $question_id);
+        // ''ではなく""で飛ぶことができた
+        return redirect("/question/$questions->id/detail?referer=post_answer");
 
   }
 
