@@ -52,7 +52,6 @@ class QuestionController extends Controller
         $answers = $answer->answerInsert($data, $user_id, $question_id);
         // ''ではなく""で飛ぶことができた
         return redirect("/question/$questions->id/detail?referer=post_answer");
-
   }
 
 
